@@ -1,14 +1,14 @@
 {
-    "name"           : "dessert",
-    "version"        : "0.3.2",
+    "name"           : "giant-assertion",
+    "version"        : "0.0.3",
     "description"    : "Extensible assertions",
     "keywords"       : ["assert", "assertions", "error", "exception"],
     "author"         : "Dan Stocker <dan@kwaia.com>",
-    "copyright"      : "Copyright (c) 2012-2013 Production Minds SD Limited",
+    "copyright"      : "Copyright (c) 2012-2015 Production Minds SD Limited, Dan Stocker",
     "license"        : "MIT",
     "repository"     : {
         "type": "git",
-        "url" : "git@github.com:production-minds/dessert.git"
+        "url" : "git@github.com:giantjs/giant-assertion.git"
     },
     "devDependencies": {
         "phil"                : "~0.2.2",
