@@ -1,6 +1,3 @@
-/**
- * Common Dessert Validators
- */
 /*global giant, jQuery */
 (function () {
     "use strict";

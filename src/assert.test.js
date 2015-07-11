@@ -2,7 +2,7 @@
 (function () {
     "use strict";
 
-    module('giant');
+    module('assert');
 
     test("General assertion", function () {
         equal(giant.assert(true), giant, "Assertion success returns namespace");

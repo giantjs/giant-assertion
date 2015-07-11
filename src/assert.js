@@ -40,7 +40,7 @@
 
                 // joining message parts together
                 message = args.join(' ');
-                throw new Error("Dessertion failed: " + message);
+                throw new Error("Assertion failed: " + message);
             }
         }
 
