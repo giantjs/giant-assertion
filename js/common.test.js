@@ -1,10 +1,10 @@
-/*global dessert, module, test, raises, equal, ok */
+/*global giant, module, test, raises, equal, ok */
 (function () {
     "use strict";
 
     module('common asserts');
 
-    var v = dessert.validators;
+    var v = giant.validators;
 
     test("Value check", function () {
         equal(v.hasValue(null), true, "Null passes value assert");

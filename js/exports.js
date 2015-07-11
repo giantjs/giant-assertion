@@ -1,7 +1,7 @@
 /**
  * Library exports
  */
-/*global dessert, module */
+/*global giant, module */
 if (typeof module === 'object') {
-    module.exports = dessert;
+    module.exports = giant;
 }

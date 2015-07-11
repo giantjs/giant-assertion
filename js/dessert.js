@@ -1,4 +1,4 @@
-var dessert;
+var giant;
 
 (function () {
     "use strict";
@@ -9,9 +9,9 @@ var dessert;
     var customHandler;
 
     /**
-     * @class dessert
+     * @class giant
      */
-    dessert = {
+    giant = {
         /**
          * Namespace for custom validators
          * @dict
@@ -21,7 +21,7 @@ var dessert;
         /**
          * Asserts an expression.
          * @param {boolean|function} expr Boolean expression or validator function.
-         * @return {dessert}
+         * @return {giant}
          */
         assert: function (expr) {
             var args,
@@ -56,7 +56,7 @@ var dessert;
         /**
          * Setter for global handler.
          * @param {function|undefined} value
-         * @return {dessert}
+         * @return {giant}
          */
         customHandler: function (value) {
             customHandler = value;
@@ -70,7 +70,7 @@ var dessert;
          * In it, `this` will refer to the `validators` namespace containing
          * all available validators. Expected to return boolean.
          * @param {boolean} [allowOverride] Whether to allow overriding existing validators.
-         * @return {dessert}
+         * @return {giant}
          */
         addType: function (methodName, validator, allowOverride) {
             this
@@ -88,7 +88,7 @@ var dessert;
 
                 /**
                  * Wrapping and adding validator to main namespace
-                 * @returns {dessert}
+                 * @returns {giant}
                  */
                 this[methodName] = function () {
                     var success = validator.apply(validators, arguments),
@@ -115,13 +115,13 @@ var dessert;
 
         /**
          * Adds new validator(s).
-         * In a validator function, `this` will refer to the `dessert` namespace.
+         * In a validator function, `this` will refer to the `giant` namespace.
          * Expected to return boolean.
          * IMPORTANT: `.addTypes()` is preferable to `.addType()`, for IDE integration reasons,
          * even when adding a single type.
          * @param {object} methods
          * @param {boolean} [allowOverride] Whether to allow overriding existing validators.
-         * @return {dessert}
+         * @return {giant}
          */
         addTypes: function (methods, allowOverride) {
             this.assert(methods instanceof Object, "Invalid methods object");

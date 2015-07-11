@@ -1,11 +1,11 @@
 /**
  * Common Dessert Validators
  */
-/*global dessert, jQuery */
+/*global giant, jQuery */
 (function () {
     "use strict";
 
-    dessert.addTypes(/** @lends dessert */{
+    giant.addTypes(/** @lends giant */{
         hasValue: function (expr) {
             return typeof expr !== 'undefined';
         },
