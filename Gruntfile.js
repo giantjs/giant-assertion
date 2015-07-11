@@ -4,12 +4,12 @@ module.exports = function (grunt) {
 
     var params = {
         files: [
-            'js/dessert.js',
-            'js/common.js',
-            'js/exports.js'
+            'src/dessert.js',
+            'src/common.js',
+            'src/exports.js'
         ],
 
-        test: 'js/jsTestDriver.conf',
+        test: 'src/jsTestDriver.conf',
 
         globals: {}
     };
