@@ -22,6 +22,8 @@
         "common-gruntfile"    : "git://github.com/danstocker/common-gruntfile.git#0.1.2",
         "QUnitAdapter"        : "https://dl.dropboxusercontent.com/u/9258903/packages/QUnitAdapter-0.1.0.tgz"
     },
-    "files"          : ["dessert.js"],
-    "main"           : "dessert.js"
+    "files"          : [
+        "giant-assertion.js"
+    ],
+    "main"           : "giant-assertion.js"
 }
