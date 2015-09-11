@@ -7,9 +7,9 @@
     test("General assertion", function () {
         equal(giant.assert(true), giant, "Assertion success returns namespace");
 
-        raises(function () {
+        throws(function () {
             giant.assert(false);
-        }, "Failed assertion raises exception");
+        }, "Failed assertion throws exception");
     });
 
     test("Custom handler", function () {
@@ -19,7 +19,7 @@
             ok(true, "Custom handler called");
             equal(message, "foo", "Message passed to custom handler");
         });
-        raises(function () {
+        throws(function () {
             giant.assert(false, "foo");
         }, "Assertion with custom handler");
 
@@ -40,19 +40,19 @@
     });
 
     test("Type addition", function () {
-        raises(function () {
+        throws(function () {
             giant.addType('assert', function () {});
         }, "Attempting to replace core function");
 
         ok(!giant.hasOwnProperty('test'), "New type is not pre-existing (sanity check)");
 
-        raises(function () {
+        throws(function () {
             giant.addType(1, function () {});
-        }, "Invalid method name argument raises exception");
+        }, "Invalid method name argument throws exception");
 
-        raises(function () {
+        throws(function () {
             giant.addType('test', 'foo');
-        }, "Invalid validator argument raises exception");
+        }, "Invalid validator argument throws exception");
 
         function validator(expr) {
             // returning a boolean expression to be passed to `.assert`
@@ -63,7 +63,7 @@
 
         ok(giant.hasOwnProperty('test'), "New property added to namespace");
 
-        raises(function () {
+        throws(function () {
             giant.addType('test', function () {});
         }, "Attempting to overwrite custom validator");
 
@@ -71,7 +71,7 @@
 
         equal(giant.test('test'), giant, "Custom assertion passed");
 
-        raises(function () {
+        throws(function () {
             giant.test('foo');
         }, "Custom assertion failed");
 
@@ -83,7 +83,7 @@
     test("Type addition with override", function () {
         giant.addType('test', function () {});
 
-        raises(function () {
+        throws(function () {
             giant.addType('test', function () {});
         }, "Attempting to overwrite custom validator");
 
@@ -144,7 +144,7 @@
 
         equal(giant.test('test'), giant, "Custom assertion passed");
 
-        raises(function () {
+        throws(function () {
             giant.test('foo');
         }, "Custom assertion failed");
 

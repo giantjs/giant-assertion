@@ -1,4 +1,4 @@
-/*global giant, module, test, raises, equal, ok */
+/*global giant, module, test, throws, equal, ok */
 (function () {
     "use strict";
 
