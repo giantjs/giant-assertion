@@ -1,3 +1,4 @@
+/*global giant */
 (function () {
     "use strict";
 
@@ -8,14 +9,14 @@
 
     /**
      * Namespace for custom validators
-     * @dict
+     * @namespace
      */
     giant.validators = {};
 
     /**
      * Asserts an expression.
      * @param {boolean|function} expr Boolean expression or validator function.
-     * @return {giant}
+     * @returns {giant}
      */
     giant.assert = function (expr) {
         var args,
@@ -50,7 +51,7 @@
     /**
      * Setter for global handler.
      * @param {function|undefined} value
-     * @return {giant}
+     * @returns {giant}
      */
     giant.customHandler = function (value) {
         customHandler = value;
@@ -64,7 +65,7 @@
      * In it, `this` will refer to the `validators` namespace containing
      * all available validators. Expected to return boolean.
      * @param {boolean} [allowOverride] Whether to allow overriding existing validators.
-     * @return {giant}
+     * @returns {giant}
      */
     giant.addType = function (methodName, validator, allowOverride) {
         this
@@ -115,7 +116,7 @@
      * even when adding a single type.
      * @param {object} methods
      * @param {boolean} [allowOverride] Whether to allow overriding existing validators.
-     * @return {giant}
+     * @returns {giant}
      */
     giant.addTypes = function (methods, allowOverride) {
         this.assert(methods instanceof Object, "Invalid methods object");
