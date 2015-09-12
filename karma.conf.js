@@ -15,8 +15,8 @@ module.exports = function (config) {
 
             'src/namespace.js',
 
-            'src/assert.js',
-            'src/common.js',
+            'src/assert.def.js',
+            'src/common.def.js',
 
             'src/**/*.test.js'
         ],
