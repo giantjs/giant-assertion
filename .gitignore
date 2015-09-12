@@ -1,5 +1,4 @@
 /*.tgz
 /.idea/
-/giant-assertion.js
 /node_modules/
-/out/
+/lib/

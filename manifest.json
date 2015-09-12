@@ -1,0 +1,12 @@
+{
+  "main": {
+    "assets": {
+      "js": [
+        "src/namespace.js",
+        "src/assert.def.js",
+        "src/common.def.js",
+        "src/exports.js"
+      ]
+    }
+  }
+}
