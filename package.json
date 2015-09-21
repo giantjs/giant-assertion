@@ -1,6 +1,6 @@
 {
     "name"           : "giant-assertion",
-    "version"        : "0.0.6",
+    "version"        : "0.0.7",
     "description"    : "Assertion module for Giant",
     "keywords"       : [
         "giant",
@@ -15,7 +15,7 @@
         "url" : "git@github.com:giantjs/giant-assertion.git"
     },
     "dependencies"   : {
-        "giant-namespace": "0.0.6"
+        "giant-namespace": "0.0.7"
     },
     "devDependencies": {
         "QUnitAdapter"        : "https://dl.dropboxusercontent.com/u/9258903/packages/QUnitAdapter-0.1.0.tgz",
