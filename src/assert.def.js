@@ -1,4 +1,4 @@
-/*global giant */
+/*global $assertion */
 (function () {
     "use strict";
 
@@ -11,14 +11,14 @@
      * Namespace for custom validators
      * @namespace
      */
-    giant.validators = {};
+    $assertion.validators = {};
 
     /**
      * Asserts an expression.
      * @param {boolean|function} expr Boolean expression or validator function.
-     * @returns {giant}
+     * @returns {$assertion}
      */
-    giant.assert = function (expr) {
+    $assertion.assert = function (expr) {
         var args,
             throwException,
             message;
@@ -51,9 +51,9 @@
     /**
      * Setter for global handler.
      * @param {function|undefined} value
-     * @returns {giant}
+     * @returns {$assertion}
      */
-    giant.customHandler = function (value) {
+    $assertion.customHandler = function (value) {
         customHandler = value;
         return this;
     };
@@ -65,9 +65,9 @@
      * In it, `this` will refer to the `validators` namespace containing
      * all available validators. Expected to return boolean.
      * @param {boolean} [allowOverride] Whether to allow overriding existing validators.
-     * @returns {giant}
+     * @returns {$assertion}
      */
-    giant.addType = function (methodName, validator, allowOverride) {
+    $assertion.addType = function (methodName, validator, allowOverride) {
         this
             .assert(typeof methodName === 'string', "Invalid method name")
             .assert(typeof validator === 'function', "Invalid validator function");
@@ -83,7 +83,7 @@
 
             /**
              * Wrapping and adding validator to main namespace
-             * @returns {giant}
+             * @returns {$assertion}
              */
             this[methodName] = function () {
                 var success = validator.apply(validators, arguments),
@@ -110,15 +110,15 @@
 
     /**
      * Adds new validator(s).
-     * In a validator function, `this` will refer to the `giant` namespace.
+     * In a validator function, `this` will refer to the `$assertion` namespace.
      * Expected to return boolean.
      * IMPORTANT: `.addTypes()` is preferable to `.addType()`, for IDE integration reasons,
      * even when adding a single type.
      * @param {object} methods
      * @param {boolean} [allowOverride] Whether to allow overriding existing validators.
-     * @returns {giant}
+     * @returns {$assertion}
      */
-    giant.addTypes = function (methods, allowOverride) {
+    $assertion.addTypes = function (methods, allowOverride) {
         this.assert(methods instanceof Object, "Invalid methods object");
 
         var methodName,

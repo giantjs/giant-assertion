@@ -1,10 +1,10 @@
-/*global giant, module, test, throws, equal, ok */
+/*global $assertion, module, test, throws, equal, ok */
 (function () {
     "use strict";
 
     module('common asserts');
 
-    var v = giant.validators;
+    var v = $assertion.validators;
 
     test("Value check", function () {
         equal(v.hasValue(null), true, "Null passes value assert");

@@ -1,8 +1,8 @@
-/*global giant, jQuery */
+/*global $assertion, jQuery */
 (function () {
     "use strict";
 
-    giant.addTypes(/** @lends giant */{
+    $assertion.addTypes(/** @lends $assertion */{
         hasValue: function (expr) {
             return typeof expr !== 'undefined';
         },
