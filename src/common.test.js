@@ -1,4 +1,3 @@
-/*global $assertion, module, test, throws, equal, ok */
 (function () {
     "use strict";
 
