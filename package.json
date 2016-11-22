@@ -1,6 +1,6 @@
 {
   "name": "giant-assertion",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Assertion module for Giant",
   "keywords": [
     "giant",
@@ -8,7 +8,7 @@
     "assertions"
   ],
   "author": "Dan Stocker <dan@kwaia.com>",
-  "copyright": "Copyright (c) 2012-2015 Production Minds SD Limited, Dan Stocker",
+  "copyright": "Copyright (c) 2012-2016 Production Minds SD Limited, Dan Stocker",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -18,12 +18,12 @@
     "npm": "^3.0.0"
   },
   "devDependencies": {
-    "giant-assertion": "~0.3.0",
-    "giant-asset": "~0.3.0",
-    "giant-data": "~0.3.0",
-    "giant-grunt-tools": "~0.3.0",
-    "giant-oop": "~0.3.0",
-    "giant-utils": "~0.3.0",
+    "giant-assertion": "~0.4.0",
+    "giant-asset": "~0.4.0",
+    "giant-data": "~0.4.0",
+    "giant-grunt-tools": "~0.4.0",
+    "giant-oop": "~0.4.0",
+    "giant-utils": "~0.4.0",
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-karma": "^0.12.1",
